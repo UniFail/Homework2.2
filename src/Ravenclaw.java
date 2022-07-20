@@ -1,11 +1,11 @@
-public class Ravenclaw extends Hogwarts{
+public class Ravenclaw extends Hogwarts {
     private int mind;
     private int wisdom;
     private int wit;
     private int creativity;
 
-    public Ravenclaw(String name, int magic, int distTransgression, int mind, int wisdom, int wit, int creativity){
-        super(name,magic,distTransgression);
+    public Ravenclaw(String name, int magic, int distTransgression, int mind, int wisdom, int wit, int creativity) {
+        super(name, magic, distTransgression);
         this.mind = mind;
         this.wisdom = wisdom;
         this.wit = wit;
@@ -48,6 +48,6 @@ public class Ravenclaw extends Hogwarts{
     @Override
     public String toString() {
         return String.format("%s; Mind: %d; Wisdom: %d; Wit: %d; Creativity: %d",
-                super.toString(),mind,wisdom,wit,creativity);
+                super.toString(), mind, wisdom, wit, creativity);
     }
 }

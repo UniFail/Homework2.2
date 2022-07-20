@@ -33,24 +33,27 @@ public abstract class Hogwarts {
         this.distTransgression = distTransgression;
     }
 
-    public void print(){
+    public void print() {
         System.out.println(this);
     }
-    private int ability(){
+
+    private int ability() {
         return magic + distTransgression;
     }
+
     public void compareHogwatrs(Hogwarts hogwarts) {
         int ability1 = ability();
         int ability2 = hogwarts.ability();
         if (ability1 > ability2)
-            String.format("Student %s better, than student %s: %d VS %%d%n", getName(), hogwarts.getName(), ability1, ability2);
+            System.out.printf("Student %s better, than student %s: %d VS %d%n", getName(), hogwarts.getName(), ability1, ability2);
         else if (ability2 > ability1)
-            String.format("Student %s better, than student %s: %d VS %%d%n", getName(), hogwarts.getName(), ability2, ability1);
+            System.out.printf("Student %s better, than student %s: %d VS %d%n", getName(), hogwarts.getName(), ability2, ability1);
         else if (ability2 == ability1)
-            String.format("Student %s like, than student %s: %d VS %%d%n", getName(), hogwarts.getName(), ability1, ability2);
+            System.out.printf("Student %s like, than student %s: %d VS %d%n", getName(), hogwarts.getName(), ability1, ability2);
     }
+
     @Override
     public String toString() {
-        return String.format("Student's name: %s; The Power of magic: %d; \nThe distance of the transgression: %d", name,magic,distTransgression);
+        return String.format("Student's name: %s; The Power of magic: %d; \nThe distance of the transgression: %d", name, magic, distTransgression);
     }
 }
