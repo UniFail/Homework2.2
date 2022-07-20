@@ -23,6 +23,20 @@ public class Main {
                 new Slytherin("Graham Montague", 70,25,81,60,66,37,15),
                 new Slytherin("Gregory Goyle", 75,60,30,55,24,68,48)
         };
+        Hogwarts[] hogwarts = new Hogwarts[gryffindors.length + hufflepuffs.length + ravenclaws.length + slytherins.length];
+        for (int i = 0; i < gryffindors.length; i++) {
+            hogwarts[i] = gryffindors[i];
+        }
+        for (int i = 0; i < hufflepuffs.length; i++) {
+            hogwarts[i + gryffindors.length] = hufflepuffs[i];
+        }
+        for (int i = 0; i < ravenclaws.length; i++) {
+            hogwarts[i + hufflepuffs.length] = ravenclaws[i];
+        }
+        for (int i = 0; i < slytherins.length; i++) {
+            hogwarts[i + ravenclaws.length] = slytherins[i];
+        }
+
         PrintStudents printStudents = new PrintStudents();
         printStudents.print(gryffindors);
         printStudents.print(hufflepuffs);
@@ -34,7 +48,7 @@ public class Main {
         bestStudents.best(hufflepuffs, "Zachariah Smith", "Cedric Diggory");
         bestStudents.best(ravenclaws, "Zhou Chang", "Marcus Belby");
         bestStudents.best(slytherins,"Draco Malfoy","Gregory Goyle");
-        bestStudents.generalSkills(slytherins,ravenclaws,hufflepuffs,gryffindors,"Harry Potter","Draco Malfoy");
+       // bestStudents.generalSkills(hogwarts,"Harry Potter","Draco Malfoy");
 
     }
 }
